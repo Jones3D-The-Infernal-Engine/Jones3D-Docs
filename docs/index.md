@@ -30,19 +30,19 @@ Root
 
 <div class="grid cards" markdown>  
 
-- [**COG script**](cog.md)
+- :material-cog: [**COG script**](cog.md)
 
     ---  
 
     COG scripts are the heart of game logic. They define the mechanics behind the game, like cutscenes, level goals, unlocking/locking doors, weapon definitions, etc.
 
-- [**KEY**](key.md)
+- :material-animation: [**KEY**](key.md)
 
     ---  
 
     KEY file (short for Keyframe file) defines various animations of the mesh joint nodes of associated 3DO model. To edit KEY animations use Sith addon for Blender.
 
-- [**PUP**](pup.md)
+- :material-run: [**PUP**](pup.md)
 
     ---  
 
@@ -65,20 +65,21 @@ There are 2 types of level files:
     The maximum file name length, including the file extension in **Jones3D engine**, is limited to **64 characters**. Therefore, longer file names must be **abbreviated**.  
 
 ### **Common Abbreviations**
+
 | Abbreviation | Meaning | Abbreviation | Meaning |
 |-------------|---------|-------------|---------|
-| **dflt** | Default | **mo**   | Monkey |
-| **bk**   | Back | **ol**   | Old Lady |
-| **by**   | Boy | **rft**  | Raft |
-| **com**  | Commie | **sn**   | Snake |
-| **fr**   | Front | **sp**   | Spider |
-| **ib**   | Ice Boss | **so**   | Sophia |
-| **ij**   | Indy Jeep | **tu**   | Turner |
-| **in**   | Indy | **uw**   | Under Water |
-| **inv**  | Inventory | **vo**   | Volodnikov |
-| **ir**   | Indy Raft | **yl**   | Young Lady |
-| **lb**   | Lava Boss |  |  |
-| **mc**   | Mine Car |  |  |
+| `dflt` | Default | `mo`   | Monkey |
+| `bk`   | Back | `ol`   | Old Lady |
+| `by`   | Boy | `rft`  | Raft |
+| `com`  | Commie | `sn`   | Snake |
+| `fr`   | Front | `sp`   | Spider |
+| `ib`   | Ice Boss | `so`   | Sophia |
+| `ij`   | Indy Jeep | `tu`   | Turner |
+| `in`   | Indy | `uw`   | Under Water |
+| `inv`  | Inventory | `vo`   | Volodnikov |
+| `ir`   | Indy Raft | `yl`   | Young Lady |
+| `lb`   | Lava Boss |  |  |
+| `mc`   | Mine Car |  |  |
 
 !!! note
     Additionally, every file referring to a **specific game level** is prefixed with **three letters of the abbreviated level name** (e.g., `pyr_`, `pru_`...).
