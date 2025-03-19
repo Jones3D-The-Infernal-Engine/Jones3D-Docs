@@ -7,6 +7,10 @@ theme:
     - navigation.indexes
 extra_css:
   - stylesheets/extra.css
+
+repo_url: https://github.com/smlu/OpenJones3D/
+repo_name: smlu/OpenJones3D
+
 markdown_extensions:
   - admonition
   - pymdownx.details
