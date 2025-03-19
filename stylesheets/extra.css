@@ -1,0 +1,114 @@
+[data-md-color-scheme="indy"] {
+    /* Primary colors - Dark Indiana Jones leather */
+    --md-primary-fg-color:               #704214; /* Darker Saddle Brown - Indy's weathered leather jacket */
+    --md-primary-fg-color--light:        #8B4513; /* Original leather color */
+    --md-primary-fg-color--dark:         #45290D; /* Very dark leather */
+    --md-primary-bg-color:               #292522; /* Dark aged parchment */
+    --md-primary-bg-color--light:        rgba(41, 37, 34, 0.7); /* Dark parchment with transparency */
+  
+    /* Accent colors - subdued archaeological gold */
+    --md-accent-fg-color:                #B8860B; /* Dark Goldenrod - artifacts/treasures */
+    --md-accent-fg-color--transparent:   rgba(184, 134, 11, 0.1); /* Transparent gold */
+    --md-accent-bg-color:                #292522; /* Dark aged parchment */
+    --md-accent-bg-color--light:         rgba(41, 37, 34, 0.7); /* Dark parchment with transparency */
+  
+    /* Default colors */
+    --md-default-fg-color:               #E8DED1; /* Light sandy color for text - high contrast */
+    --md-default-fg-color--light:        rgba(232, 222, 209, 0.7); /* Light sandy with transparency */
+    --md-default-fg-color--lighter:      rgba(232, 222, 209, 0.3); /* Light sandy with more transparency */
+    --md-default-fg-color--lightest:     rgba(232, 222, 209, 0.12); /* Light sandy with most transparency */
+    --md-default-bg-color:               #262220; /* Dark brown background - aged temple wall */
+    --md-default-bg-color--light:        rgba(38, 34, 32, 0.7); /* Dark brown with transparency */
+    --md-default-bg-color--lighter:      rgba(38, 34, 32, 0.3); /* Dark brown with more transparency */
+    --md-default-bg-color--lightest:     rgba(38, 34, 32, 0.12); /* Dark brown with most transparency */
+  
+    /* Code colors - ancient scroll in dim light */
+    --md-code-fg-color:                  #E8DED1; /* Light sandy color for text */
+    --md-code-bg-color:                  #332E29; /* Slightly lighter brown for code blocks */
+  
+    /* Code highlighting colors */
+    --md-code-hl-color:                  #D4AF37; /* Gold */
+    --md-code-hl-color--light:           rgba(212, 175, 55, 0.15); /* Gold with transparency */
+    --md-code-hl-number-color:           #D9794E; /* Muted clay red */
+    --md-code-hl-special-color:          #C79C60; /* Muted tan */
+    --md-code-hl-function-color:         #D4AF37; /* Gold */
+    --md-code-hl-constant-color:         #D6BA73; /* Light gold */
+    --md-code-hl-keyword-color:          #B4632C; /* Rust/clay color - muted */
+    --md-code-hl-string-color:           #7D956D; /* Muted jungle green */
+    --md-code-hl-name-color:             #E8DED1; /* Light sandy color for text */
+    --md-code-hl-operator-color:         rgba(232, 222, 209, 0.7); /* Light sandy with transparency */
+    --md-code-hl-punctuation-color:      rgba(232, 222, 209, 0.7); /* Light sandy with transparency */
+    --md-code-hl-comment-color:          rgba(232, 222, 209, 0.5); /* Light sandy with more transparency */
+    --md-code-hl-generic-color:          rgba(232, 222, 209, 0.7); /* Light sandy with transparency */
+    --md-code-hl-variable-color:         rgba(232, 222, 209, 0.7); /* Light sandy with transparency */
+  
+    /* Typeset colors */
+    --md-typeset-color:                  #E8DED1; /* Light sandy color for text */
+    --md-typeset-a-color:                #D4AF37; /* Gold links */
+    --md-typeset-del-color:              rgba(244, 67, 54, 0.15); /* Red with transparency */
+    --md-typeset-ins-color:              rgba(125, 149, 109, 0.15); /* Muted jungle green with transparency */
+    --md-typeset-kbd-color:              #332E29; /* Slightly lighter brown for kbd */
+    --md-typeset-kbd-accent-color:       #B8860B; /* Dark Goldenrod */
+    --md-typeset-kbd-border-color:       #704214; /* Darker Saddle Brown */
+    --md-typeset-mark-color:             rgba(184, 134, 11, 0.2); /* Dark Goldenrod with transparency */
+    --md-typeset-table-color:            rgba(232, 222, 209, 0.12); /* Light sandy with transparency */
+    --md-typeset-table-color--light:     rgba(232, 222, 209, 0.035); /* Light sandy with more transparency */
+  
+    /* Admonition colors - customize all admonitions with Indiana Jones theme */
+    --md-admonition-fg-color:            #E8DED1; /* Light sandy color for text */
+    --md-admonition-bg-color:            #332E29; /* Slightly lighter brown for admonitions */
+  
+    /* Note admonition - aged papyrus */
+    --md-admonition-note-color:          #C79C60; /* Muted tan */
+  
+    /* Abstract admonition - temple carvings */
+    --md-admonition-abstract-color:      #B8AC94; /* Muted stone color */
+  
+    /* Info admonition - ancient knowledge */
+    --md-admonition-info-color:          #8BA3B0; /* Muted dusty blue - like ancient pottery */
+  
+    /* Tip admonition - treasure map */
+    --md-admonition-tip-color:           #D4AF37; /* Gold */
+  
+    /* Success admonition - found the treasure */
+    --md-admonition-success-color:       #7D956D; /* Muted jungle green */
+  
+    /* Question admonition - mysterious puzzle */
+    --md-admonition-question-color:      #A89476; /* Muted sand color */
+  
+    /* Warning admonition - trap ahead */
+    --md-admonition-warning-color:       #D9794E; /* Muted clay red */
+  
+    /* Failure admonition - boulder trap */
+    --md-admonition-failure-color:       #C54D2F; /* Darker clay red */
+  
+    /* Danger admonition - deadly danger */
+    --md-admonition-danger-color:        #AF3029; /* Dark red - blood/danger */
+  
+    /* Bug admonition - snake pit */
+    --md-admonition-bug-color:           #8F704D; /* Snake brown */
+  
+    /* Example admonition - ancient relic */
+    --md-admonition-example-color:       #C8B083; /* Lighter muted tan */
+  
+    /* Quote admonition - ancient wisdom */
+    --md-admonition-quote-color:         #9C9082; /* Muted stone gray */
+  
+    /* Footer colors - dark temple stone */
+    --md-footer-fg-color:                #E8DED1; /* Light sandy color for text */
+    --md-footer-fg-color--light:         rgba(232, 222, 209, 0.7); /* Light sandy with transparency */
+    --md-footer-fg-color--lighter:       rgba(232, 222, 209, 0.45); /* Light sandy with more transparency */
+    --md-footer-bg-color:                #1E1B19; /* Very dark brown - darker than main background */
+    --md-footer-bg-color--dark:          #171513; /* Extremely dark brown */
+  
+    /* Shadow colors - deeper temple shadows */
+    --md-shadow-z1:
+      0 0.25rem 0.625rem rgba(0, 0, 0, 0.1),
+      0 0 0.0625rem rgba(0, 0, 0, 0.25);
+    --md-shadow-z2:
+      0 0.25rem 0.625rem rgba(0, 0, 0, 0.2),
+      0 0 0.0625rem rgba(0, 0, 0, 0.35);
+    --md-shadow-z3:
+      0 0.25rem 0.625rem rgba(0, 0, 0, 0.3),
+      0 0 0.0625rem rgba(0, 0, 0, 0.45);
+  }
