@@ -1,3 +1,36 @@
+@font-face {
+  font-family: 'Adventure';
+  src: url('../assets/fonts/adventure.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply it to headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Adventure', sans-serif;
+}
+
+/* Main navigation title
+.md-nav--primary .md-nav__title {
+  
+}*/
+
+.md-header__title {
+  font-family: 'Adventure', sans-serif;
+}
+
+/* Section navigation titles */
+.md-nav--secondary .md-nav__title {
+  font-size: 1.1rem;
+  font-family: 'Adventure', sans-serif;
+}
+
+/* Hardcoded fix to site name rendering issue, VERY UGLY */
+.md-header__ellipsis > .md-header__topic > .md-ellipsis {
+  padding-right: 4px !important;
+  font-size: 1.3rem;
+}
+
 [data-md-color-scheme="indy"] {
     /* Primary colors - Dark Indiana Jones leather */
     --md-primary-fg-color:               #704214; /* Darker Saddle Brown - Indy's weathered leather jacket */
@@ -163,5 +196,26 @@
 
     .md-header__button {
       color: var(--md-default-fg-color);
+    }
+
+    .md-search__form {
+      background-color: #815931;
+    }
+
+    /* Hardcoded material theme "responsiveness" start */
+    @media (max-width: 1219px) {
+      .md-nav__source {
+        color: var(--md-default-fg-color);
+      }
+
+      .md-nav__button {
+        color: var(--md-default-fg-color);
+      }
+
+      .md-nav__title {
+        color: var(--md-default-fg-color) !important;
+        font-family: 'Adventure', sans-serif;
+        font-size: 1.3rem;
+      }
     }
 }
