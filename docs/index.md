@@ -1,4 +1,4 @@
-# **:fontawesome-solid-hat-cowboy: Indiana Jones and The Infernal Machine** Documentation
+# Introduction
 
 !!! warning "Work in progress!"
     This is an unofficial and incomplete documentation about the game file structure and modding. For any information not found here, please look into [Discussions](https://github.com/Jones3D-The-Infernal-Engine/Documentation/discussions) and post any question there.

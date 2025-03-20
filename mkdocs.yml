@@ -1,6 +1,11 @@
-site_name: Jones3D Docs
+site_name: Indiana Jones and the Infernal Machine Documentation
 theme:
+  favicon: images/favicon.svg
   name: material
+  icon:
+    logo: simple/redhat
+    admonition:
+      note: material/script-text
   palette:
     scheme: indy
   features:

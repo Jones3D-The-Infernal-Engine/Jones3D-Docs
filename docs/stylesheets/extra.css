@@ -58,8 +58,8 @@
     --md-admonition-fg-color:            #E8DED1; /* Light sandy color for text */
     --md-admonition-bg-color:            #332E29; /* Slightly lighter brown for admonitions */
   
-    /* Note admonition - aged papyrus */
-    --md-admonition-note-color:          #C79C60; /* Muted tan */
+    /* Note admonition - now more neutral and dimmer */
+    --md-admonition-note-color:          #777777; /* Neutral gray - like pencil notes */
   
     /* Abstract admonition - temple carvings */
     --md-admonition-abstract-color:      #B8AC94; /* Muted stone color */
@@ -111,4 +111,57 @@
     --md-shadow-z3:
       0 0.25rem 0.625rem rgba(0, 0, 0, 0.3),
       0 0 0.0625rem rgba(0, 0, 0, 0.45);
-  }
+
+    /* Indiana Jones theme for MkDocs Material note admonition */
+
+    /* Note admonition - to match the --md-admonition-note-color value from your theme */
+    .md-typeset .admonition.note,
+    .md-typeset details.note {
+      border-color: #777777; /* Neutral gray - like pencil notes */
+    }
+
+    /* Title area background */
+    .md-typeset .note > .admonition-title,
+    .md-typeset .note > summary {
+      background-color: rgba(119, 119, 119, 0.1); /* Lighter version of the note gray */
+      color: #E8DED1; /* Light sandy color from your theme */
+    }
+
+    /* Icon color */
+    .md-typeset .note > .admonition-title::before,
+    .md-typeset .note > summary::before {
+      background-color: #777777; /* Neutral gray - like pencil notes */
+      -webkit-mask-image: var(--md-admonition-icon--note);
+              mask-image: var(--md-admonition-icon--note);
+    }
+
+    /* Content area */
+    .md-typeset .note {
+      background-color: #332E29; /* Slightly lighter brown for admonitions from your theme */
+      color: #E8DED1; /* Light sandy color from your theme */
+    }
+
+    /* Hover effect for collapsible admonitions */
+    .md-typeset details.note:hover {
+      border-color: #8B8B8B; /* Slightly lighter gray on hover */
+    }
+
+    /* Adjust the background color when the admonition is expanded */
+    .md-typeset details.note[open] > .admonition-title,
+    .md-typeset details.note[open] > summary {
+      background-color: rgba(119, 119, 119, 0.15); /* Slightly darker when open */
+    }
+
+    .md-header__title {
+      color: var(--md-default-fg-color);
+    }
+
+    /* GitHub icon/link in navbar */
+    .md-header__source {
+      color: var(--md-default-fg-color);
+    }
+
+    .md-header__button {
+      color: var(--md-default-fg-color);
+    }
+}
