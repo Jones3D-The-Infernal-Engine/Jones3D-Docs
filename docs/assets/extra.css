@@ -10,25 +10,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Adventure', sans-serif;
 }
 
-/* Main navigation title
-.md-nav--primary .md-nav__title {
-  
-}*/
-
 .md-header__title {
   font-family: 'Adventure', sans-serif;
+  font-size: 1.5rem;
+}
+
+.md-ellipsis {
+  display: inline-block; /* Ensure it respects text width */
+  max-width: none; /* Remove any width restrictions */
+  overflow: visible; /* Prevent clipping */
+  white-space: nowrap; /* Prevent line breaks */
+  text-overflow: unset; /* Ensure full text is displayed */
 }
 
 /* Section navigation titles */
 .md-nav--secondary .md-nav__title {
   font-size: 1.1rem;
   font-family: 'Adventure', sans-serif;
-}
-
-/* Hardcoded fix to site name rendering issue, VERY UGLY */
-.md-header__ellipsis > .md-header__topic > .md-ellipsis {
-  padding-right: 4px !important;
-  font-size: 1.3rem;
 }
 
 [data-md-color-scheme="indy"] {
