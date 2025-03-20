@@ -1,7 +1,9 @@
-site_name: Indiana Jones and the Infernal Machine Documentation
+site_name: OpenJones3D
 theme:
-  favicon: images/favicon.svg
+  favicon: assets/images/favicon.svg
   name: material
+  font:
+    text: Libre Baskerville
   icon:
     logo: simple/redhat
     admonition:
@@ -11,7 +13,10 @@ theme:
   features:
     - navigation.indexes
 extra_css:
-  - stylesheets/extra.css
+  - assets/extra.css
+
+extra:
+  sidebar_title: 'Custom Sidebar Title'  # Custom title for the sidebar
 
 repo_url: https://github.com/smlu/OpenJones3D/
 repo_name: smlu/OpenJones3D
