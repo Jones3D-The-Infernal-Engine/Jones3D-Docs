@@ -1,0 +1,6046 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../cog_system/">
+      
+      
+        <link rel="next" href="../cog_voice/">
+      
+      
+      <link rel="icon" href="../../assets/img/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Thing COG functions - OpenJones3D</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17.8%2020c-.4%201.2-1.5%202-2.8%202H5c-1.7%200-3-1.3-3-3v-1h12.2c.4%201.2%201.5%202%202.8%202zM19%202c1.7%200%203%201.3%203%203v1h-2V5c0-.6-.4-1-1-1s-1%20.4-1%201v13h-1c-.6%200-1-.4-1-1v-1H5V5c0-1.7%201.3-3%203-3zM8%206v2h7V6zm0%204v2h6v-2z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="indy" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thing-cog-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenJones3D" class="md-header__button md-logo" aria-label="OpenJones3D" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.009 13.386c1.577 0 3.86-.326 3.86-2.202a1.8 1.8 0 0 0-.04-.431l-.94-4.08c-.216-.898-.406-1.305-1.982-2.093-1.223-.625-3.888-1.658-4.676-1.658-.733 0-.947.946-1.822.946-.842 0-1.467-.706-2.255-.706-.757 0-1.25.515-1.63 1.576 0 0-1.06 2.99-1.197 3.424a.8.8 0 0 0-.028.245c0 1.162 4.577 4.974 10.71 4.974m4.101-1.435c.218 1.032.218 1.14.218 1.277 0 1.765-1.984 2.745-4.593 2.745-5.895.004-11.06-3.451-11.06-5.734a2.3 2.3 0 0 1 .19-.925C2.746 9.415 0 9.794 0 12.217c0 3.969 9.405 8.861 16.851 8.861 5.71 0 7.149-2.582 7.149-4.62 0-1.605-1.387-3.425-3.887-4.512"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenJones3D
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Thing COG functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/smlu/OpenJones3D/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smlu/OpenJones3D
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenJones3D" class="md-nav__button md-logo" aria-label="OpenJones3D" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.009 13.386c1.577 0 3.86-.326 3.86-2.202a1.8 1.8 0 0 0-.04-.431l-.94-4.08c-.216-.898-.406-1.305-1.982-2.093-1.223-.625-3.888-1.658-4.676-1.658-.733 0-.947.946-1.822.946-.842 0-1.467-.706-2.255-.706-.757 0-1.25.515-1.63 1.576 0 0-1.06 2.99-1.197 3.424a.8.8 0 0 0-.028.245c0 1.162 4.577 4.974 10.71 4.974m4.101-1.435c.218 1.032.218 1.14.218 1.277 0 1.765-1.984 2.745-4.593 2.745-5.895.004-11.06-3.451-11.06-5.734a2.3 2.3 0 0 1 .19-.925C2.746 9.415 0 9.794 0 12.217c0 3.969 9.405 8.861 16.851 8.861 5.71 0 7.149-2.582 7.149-4.62 0-1.605-1.387-3.425-3.887-4.512"/></svg>
+
+    </a>
+    OpenJones3D
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/smlu/OpenJones3D/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smlu/OpenJones3D
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    COG
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            COG
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_jones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jones System COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_player/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Player COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_sector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sector COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_sound/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sound COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_surface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Surface COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Thing COG functions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Thing COG functions
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitforstop" class="md-nav__link">
+    <span class="md-ellipsis">
+      WaitForStop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitforanimstop" class="md-nav__link">
+    <span class="md-ellipsis">
+      WaitForAnimStop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroything" class="md-nav__link">
+    <span class="md-ellipsis">
+      DestroyThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinghealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxhealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gethealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      HealThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinglight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingLight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinglight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingLight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinglight" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThingLight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinglightanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThingLightAnim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thingfadeanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThingFadeAnim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creatething" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createthingatpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateThingAtPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturething" class="md-nav__link">
+    <span class="md-ellipsis">
+      CaptureThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releasething" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReleaseThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addthingvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      AddThingVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applyforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      ApplyForce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detachthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      DetachThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtosurf" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToSurf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setarmedmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetArmedMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearthingflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearThingFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teleportthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeleportThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcollidetype" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCollideType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setheadlightintensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetHeadLightIntensity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingcurlightmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingCurLightMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingcurlightmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingCurLightMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorextraspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorExtraSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingposex" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingPosEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxangvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxAngVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingjointangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingJointAngle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingminheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMinHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingminheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMinHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxheadyaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxHeadYaw
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxheadyaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHeadYaw
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinglvecpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingLVecPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorheadpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorHeadPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingairdrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingAirDrag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxheadvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxHeadVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resetthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResetThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movething" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoveThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movethingtopos" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoveThingToPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingmoving" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingMoving
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismoving" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsMoving
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcurframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getgoalframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGoalFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingparent" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingParent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinguvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingUVec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinglvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingLVec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRVec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcollidetype" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCollideType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getheadlightintensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHeadLightIntensity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingvisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingVisible
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingguid" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingGuid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getguidthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGuidThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxangvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxAngVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingjointangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingJointAngle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolatepyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      InterpolatePYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinglvecpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingLVecPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getactorheadpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetActorHeadPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingjointpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingJointPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingmodelname" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingModelName
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxheadvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHeadVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyorient" class="md-nav__link">
+    <span class="md-ellipsis">
+      CopyOrient
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyorientandpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      CopyOrientAndPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinginsertoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingInsertOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinginsertoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingInsertOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingeyeoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingEyeOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingpulse" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingPulse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingtimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingTimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinv" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setinv" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetInv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changeinv" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChangeInv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinvcog" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInvCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinvmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInvMin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinvmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInvMax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playkeyex" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayKeyEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pausekey" class="md-nav__link">
+    <span class="md-ellipsis">
+      PauseKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumekey" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResumeKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SynchMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismodeplaying" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsModePlaying
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pausemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      PauseMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResumeMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracktomode" class="md-nav__link">
+    <span class="md-ellipsis">
+      TrackToMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      WaitMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmajormode" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMajorMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firstthinginsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      FirstThingInSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nextthinginsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      NextThingInSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prevthinginsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      PrevThingInSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movetoframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoveToFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skiptoframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      SkipToFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jumptoframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      JumpToFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathmovepause" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathMovePause
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathmoveresume" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathMoveResume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotatepivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      RotatePivot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotatetopyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      RotateToPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingtemplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingTemplate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damagething" class="md-nav__link">
+    <span class="md-ellipsis">
+      DamageThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setlifeleft" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLifeLeft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getlifeleft" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLifeLeft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinghealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sethealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amputatejoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      AmputateJoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorweapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorWeapon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getactorweapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetActorWeapon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getphysicsflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPhysicsFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setphysicsflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPhysicsFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearphysicsflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearPhysicsFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsearg" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrotthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRotThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingrotthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingRotThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinglook" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingLook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingheadlookpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingHeadLookPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingheadlookthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingHeadLookThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingcrouching" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingCrouching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iscrouching" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsCrouching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingclasscog" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingClassCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingclasscog" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingClassCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingcapturecog" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingCaptureCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingcapturecog" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingCaptureCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrespawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRespawn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingsignature" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingSignature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearthingattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearThingAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticlesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticlesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticlegrowthspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleGrowthSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticlegrowthspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleGrowthSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticletimeoutrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleTimeoutRate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticletimeoutrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleTimeoutRate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gettypeflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTypeFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settypeflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTypeFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleartypeflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearTypeFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getactorflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetActorFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearactorflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearActorFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getweaponflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetWeaponFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setweaponflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetWeaponFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearweaponflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearWeaponFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getexplosionflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExplosionFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setexplosionflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExplosionFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearexplosionflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearExplosionFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getitemflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetItemFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setitemflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetItemFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearitemflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearItemFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticleflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticleflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearparticleflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearParticleFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      TakeItem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haslos" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingfireoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingFireOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingfireoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingFireOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinguserdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingUserData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinguserdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingUserData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingcollidesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingCollideSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingcollidesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingCollideSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmovesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMoveSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmovesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMoveSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmass" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmass" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthingpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      SyncThingPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthingattachment" class="md-nav__link">
+    <span class="md-ellipsis">
+      SyncThingAttachment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthingstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SyncThingState
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtothingex" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToThingEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingattachedthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingAttachedThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmeshbyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMeshByName
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnodebyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNodeByName
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtothingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detachthingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      DetachThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restorethingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      RestoreThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingalpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingAlpha
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingalpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingAlpha
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcamerafov" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCameraFOV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcamerafov" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraFOV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resetcamerafov" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResetCameraFOV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcameralookinterp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraLookInterp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcameraposinterp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraPosInterp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcamerainterpspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraInterpSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcameraposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraPosition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animatespritesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimateSpriteSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcameraposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCameraPosition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcamerafadething" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraFadeThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamoffsettothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamOffsetToThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamlookoffsettothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamLookOffsetToThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamlookoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamLookOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restoreextcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      RestoreExtCam
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playforcemovemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayForceMoveMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingautoaiming" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingAutoAiming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmovestatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMoveStatus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createlaser" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateLaser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createlightning" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateLightning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefairydust" class="md-nav__link">
+    <span class="md-ellipsis">
+      MakeFairyDust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefairydustdeluxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      MakeFairyDustDeluxe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setpuppetmodefps" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPuppetModeFPS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setmovemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMoveMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkfloordistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckFloorDistance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpathtopoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckPathToPoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingstatechange" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingStateChange
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createpolylinething" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreatePolylineThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startquetzanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      StartQuetzAnim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boardvehicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      BoardVehicle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fadeintrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      FadeInTrack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isghostvisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsGhostVisible
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makecamera2likecamera1" class="md-nav__link">
+    <span class="md-ellipsis">
+      MakeCamera2LikeCamera1
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cog_voice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voice COG functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitforstop" class="md-nav__link">
+    <span class="md-ellipsis">
+      WaitForStop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitforanimstop" class="md-nav__link">
+    <span class="md-ellipsis">
+      WaitForAnimStop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroything" class="md-nav__link">
+    <span class="md-ellipsis">
+      DestroyThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinghealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxhealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gethealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      HealThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinglight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingLight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinglight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingLight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinglight" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThingLight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinglightanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThingLightAnim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thingfadeanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThingFadeAnim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creatething" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createthingatpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateThingAtPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturething" class="md-nav__link">
+    <span class="md-ellipsis">
+      CaptureThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releasething" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReleaseThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addthingvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      AddThingVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applyforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      ApplyForce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detachthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      DetachThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtosurf" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToSurf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setarmedmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetArmedMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearthingflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearThingFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teleportthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeleportThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcollidetype" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCollideType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setheadlightintensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetHeadLightIntensity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingcurlightmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingCurLightMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingcurlightmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingCurLightMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorextraspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorExtraSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingposex" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingPosEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxangvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxAngVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingjointangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingJointAngle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingminheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMinHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingminheadpitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMinHeadPitch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxheadyaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxHeadYaw
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxheadyaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHeadYaw
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinglvecpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingLVecPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorheadpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorHeadPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingairdrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingAirDrag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmaxheadvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMaxHeadVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resetthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResetThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movething" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoveThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movethingtopos" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoveThingToPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingmoving" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingMoving
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismoving" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsMoving
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcurframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getgoalframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGoalFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingparent" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingParent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinguvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingUVec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinglvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingLVec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRVec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcollidetype" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCollideType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getheadlightintensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHeadLightIntensity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingvisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingVisible
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingguid" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingGuid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getguidthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGuidThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxangvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxAngVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingjointangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingJointAngle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolatepyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      InterpolatePYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinglvecpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingLVecPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getactorheadpyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetActorHeadPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingjointpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingJointPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingmodelname" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingModelName
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmaxheadvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMaxHeadVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyorient" class="md-nav__link">
+    <span class="md-ellipsis">
+      CopyOrient
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyorientandpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      CopyOrientAndPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinginsertoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingInsertOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinginsertoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingInsertOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingeyeoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingEyeOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingpulse" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingPulse
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingtimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingTimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinv" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setinv" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetInv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changeinv" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChangeInv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinvcog" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInvCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinvmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInvMin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinvmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetInvMax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playkeyex" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayKeyEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pausekey" class="md-nav__link">
+    <span class="md-ellipsis">
+      PauseKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumekey" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResumeKey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SynchMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismodeplaying" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsModePlaying
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pausemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      PauseMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResumeMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracktomode" class="md-nav__link">
+    <span class="md-ellipsis">
+      TrackToMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waitmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      WaitMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmajormode" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMajorMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firstthinginsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      FirstThingInSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nextthinginsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      NextThingInSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prevthinginsector" class="md-nav__link">
+    <span class="md-ellipsis">
+      PrevThingInSector
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movetoframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      MoveToFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skiptoframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      SkipToFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jumptoframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      JumpToFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathmovepause" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathMovePause
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathmoveresume" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathMoveResume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotatepivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      RotatePivot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotatetopyr" class="md-nav__link">
+    <span class="md-ellipsis">
+      RotateToPYR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingtemplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingTemplate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damagething" class="md-nav__link">
+    <span class="md-ellipsis">
+      DamageThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setlifeleft" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLifeLeft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getlifeleft" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLifeLeft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinghealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sethealth" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetHealth
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amputatejoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      AmputateJoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorweapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorWeapon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getactorweapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetActorWeapon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getphysicsflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPhysicsFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setphysicsflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPhysicsFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearphysicsflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearPhysicsFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsearg" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParseArg
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingrotvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingRotVel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrotthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRotThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingrotthrust" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingRotThrust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinglook" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingLook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingheadlookpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingHeadLookPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingheadlookthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingHeadLookThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingcrouching" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingCrouching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iscrouching" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsCrouching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingclasscog" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingClassCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingclasscog" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingClassCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingcapturecog" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingCaptureCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingcapturecog" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingCaptureCog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingrespawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingRespawn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingsignature" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingSignature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearthingattachflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearThingAttachFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticlesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticlesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticlegrowthspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleGrowthSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticlegrowthspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleGrowthSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticletimeoutrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleTimeoutRate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticletimeoutrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleTimeoutRate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gettypeflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTypeFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settypeflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTypeFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleartypeflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearTypeFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getactorflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetActorFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setactorflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetActorFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearactorflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearActorFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getweaponflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetWeaponFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setweaponflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetWeaponFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearweaponflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearWeaponFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getexplosionflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExplosionFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setexplosionflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExplosionFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearexplosionflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearExplosionFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getitemflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetItemFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setitemflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetItemFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearitemflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearItemFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getparticleflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetParticleFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setparticleflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetParticleFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearparticleflags" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearParticleFlags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      TakeItem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haslos" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingfireoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingFireOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingfireoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingFireOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthinguserdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingUserData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthinguserdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingUserData
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingcollidesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingCollideSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingcollidesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingCollideSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmovesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMoveSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmovesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMoveSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingmass" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingMass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmass" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthingpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      SyncThingPos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthingattachment" class="md-nav__link">
+    <span class="md-ellipsis">
+      SyncThingAttachment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthingstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SyncThingState
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtothingex" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToThingEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingattachedthing" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingAttachedThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmeshbyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMeshByName
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnodebyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNodeByName
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachthingtothingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      AttachThingToThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detachthingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      DetachThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restorethingmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      RestoreThingMesh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getthingalpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetThingAlpha
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingalpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingAlpha
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcamerafov" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCameraFOV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcamerafov" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraFOV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resetcamerafov" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResetCameraFOV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcameralookinterp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraLookInterp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcameraposinterp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraPosInterp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcamerainterpspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraInterpSpeed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcameraposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraPosition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animatespritesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnimateSpriteSize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcameraposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCameraPosition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setcamerafadething" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCameraFadeThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamoffsettothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamOffsetToThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamlookoffsettothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamLookOffsetToThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setextcamlookoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExtCamLookOffset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restoreextcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      RestoreExtCam
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playforcemovemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayForceMoveMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isthingautoaiming" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsThingAutoAiming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getmovestatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMoveStatus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createlaser" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateLaser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createlightning" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreateLightning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefairydust" class="md-nav__link">
+    <span class="md-ellipsis">
+      MakeFairyDust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefairydustdeluxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      MakeFairyDustDeluxe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setpuppetmodefps" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPuppetModeFPS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setmovemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMoveMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkfloordistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckFloorDistance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpathtopoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckPathToPoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setthingstatechange" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetThingStateChange
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#createpolylinething" class="md-nav__link">
+    <span class="md-ellipsis">
+      CreatePolylineThing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startquetzanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      StartQuetzAnim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boardvehicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      BoardVehicle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fadeintrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      FadeInTrack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isghostvisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      IsGhostVisible
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makecamera2likecamera1" class="md-nav__link">
+    <span class="md-ellipsis">
+      MakeCamera2LikeCamera1
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="thing-cog-functions">Thing COG Functions</h1>
+<h2 id="function-list">Function List</h2>
+<ul>
+<li><a href="#waitforstop">WaitForStop</a></li>
+<li><a href="#waitforanimstop">WaitForAnimStop</a></li>
+<li><a href="#stopthing">StopThing</a></li>
+<li><a href="#destroything">DestroyThing</a></li>
+<li><a href="#getthinghealth">GetThingHealth</a></li>
+<li><a href="#getthingmaxhealth">GetThingMaxHealth</a></li>
+<li><a href="#gethealth">GetHealth</a></li>
+<li><a href="#healthing">HealThing</a></li>
+<li><a href="#getthinglight">GetThingLight</a></li>
+<li><a href="#setthinglight">SetThingLight</a></li>
+<li><a href="#thinglight">ThingLight</a></li>
+<li><a href="#thinglightanim">ThingLightAnim</a></li>
+<li><a href="#thingfadeanim">ThingFadeAnim</a></li>
+<li><a href="#creatething">CreateThing</a></li>
+<li><a href="#createthingatpos">CreateThingAtPos</a></li>
+<li><a href="#capturething">CaptureThing</a></li>
+<li><a href="#releasething">ReleaseThing</a></li>
+<li><a href="#setthingvel">SetThingVel</a></li>
+<li><a href="#addthingvel">AddThingVel</a></li>
+<li><a href="#applyforce">ApplyForce</a></li>
+<li><a href="#detachthing">DetachThing</a></li>
+<li><a href="#getattachflags">GetAttachFlags</a></li>
+<li><a href="#getthingattachflags">GetThingAttachFlags</a></li>
+<li><a href="#attachthingtosurf">AttachThingToSurf</a></li>
+<li><a href="#attachthingtothing">AttachThingToThing</a></li>
+<li><a href="#setarmedmode">SetArmedMode</a></li>
+<li><a href="#setthingflags">SetThingFlags</a></li>
+<li><a href="#clearthingflags">ClearThingFlags</a></li>
+<li><a href="#teleportthing">TeleportThing</a></li>
+<li><a href="#setthingtype">SetThingType</a></li>
+<li><a href="#setcollidetype">SetCollideType</a></li>
+<li><a href="#setheadlightintensity">SetHeadLightIntensity</a></li>
+<li><a href="#getthingcurlightmode">GetThingCurLightMode</a></li>
+<li><a href="#setthingcurlightmode">SetThingCurLightMode</a></li>
+<li><a href="#setactorextraspeed">SetActorExtraSpeed</a></li>
+<li><a href="#setthingposex">SetThingPosEx</a></li>
+<li><a href="#setthingmaxvel">SetThingMaxVel</a></li>
+<li><a href="#setthingmaxangvel">SetThingMaxAngVel</a></li>
+<li><a href="#setthingjointangle">SetThingJointAngle</a></li>
+<li><a href="#setthingmaxheadpitch">SetThingMaxHeadPitch</a></li>
+<li><a href="#setthingminheadpitch">SetThingMinHeadPitch</a></li>
+<li><a href="#getthingmaxheadpitch">GetThingMaxHeadPitch</a></li>
+<li><a href="#getthingminheadpitch">GetThingMinHeadPitch</a></li>
+<li><a href="#setthingmaxheadyaw">SetThingMaxHeadYaw</a></li>
+<li><a href="#getthingmaxheadyaw">GetThingMaxHeadYaw</a></li>
+<li><a href="#setthinglvecpyr">SetThingLVecPYR</a></li>
+<li><a href="#setactorheadpyr">SetActorHeadPYR</a></li>
+<li><a href="#setthingairdrag">SetThingAirDrag</a></li>
+<li><a href="#setthingmaxrotvel">SetThingMaxRotVel</a></li>
+<li><a href="#setthingmaxheadvel">SetThingMaxHeadVel</a></li>
+<li><a href="#resetthing">ResetThing</a></li>
+<li><a href="#movething">MoveThing</a></li>
+<li><a href="#movethingtopos">MoveThingToPos</a></li>
+<li><a href="#getthingtype">GetThingType</a></li>
+<li><a href="#isthingmoving">IsThingMoving</a></li>
+<li><a href="#ismoving">IsMoving</a></li>
+<li><a href="#getcurframe">GetCurFrame</a></li>
+<li><a href="#getgoalframe">GetGoalFrame</a></li>
+<li><a href="#getthingparent">GetThingParent</a></li>
+<li><a href="#getthingsector">GetThingSector</a></li>
+<li><a href="#getthingpos">GetThingPos</a></li>
+<li><a href="#setthingpos">SetThingPos</a></li>
+<li><a href="#getthingvel">GetThingVel</a></li>
+<li><a href="#getthinguvec">GetThingUVec</a></li>
+<li><a href="#getthinglvec">GetThingLVec</a></li>
+<li><a href="#getthingrvec">GetThingRVec</a></li>
+<li><a href="#getthingflags">GetThingFlags</a></li>
+<li><a href="#getcollidetype">GetCollideType</a></li>
+<li><a href="#getheadlightintensity">GetHeadLightIntensity</a></li>
+<li><a href="#isthingvisible">IsThingVisible</a></li>
+<li><a href="#getthingguid">GetThingGuid</a></li>
+<li><a href="#getguidthing">GetGuidThing</a></li>
+<li><a href="#getthingmaxvel">GetThingMaxVel</a></li>
+<li><a href="#getthingmaxangvel">GetThingMaxAngVel</a></li>
+<li><a href="#getthingjointangle">GetThingJointAngle</a></li>
+<li><a href="#interpolatepyr">InterpolatePYR</a></li>
+<li><a href="#getthinglvecpyr">GetThingLVecPYR</a></li>
+<li><a href="#getactorheadpyr">GetActorHeadPYR</a></li>
+<li><a href="#getthingjointpos">GetThingJointPos</a></li>
+<li><a href="#isthingmodelname">IsThingModelName</a></li>
+<li><a href="#getthingmaxrotvel">GetThingMaxRotVel</a></li>
+<li><a href="#getthingmaxheadvel">GetThingMaxHeadVel</a></li>
+<li><a href="#copyorient">CopyOrient</a></li>
+<li><a href="#copyorientandpos">CopyOrientAndPos</a></li>
+<li><a href="#getthinginsertoffset">GetThingInsertOffset</a></li>
+<li><a href="#setthinginsertoffset">SetThingInsertOffset</a></li>
+<li><a href="#getthingeyeoffset">GetThingEyeOffset</a></li>
+<li><a href="#setthingpulse">SetThingPulse</a></li>
+<li><a href="#setthingtimer">SetThingTimer</a></li>
+<li><a href="#getinv">GetInv</a></li>
+<li><a href="#setinv">SetInv</a></li>
+<li><a href="#changeinv">ChangeInv</a></li>
+<li><a href="#getinvcog">GetInvCog</a></li>
+<li><a href="#getinvmin">GetInvMin</a></li>
+<li><a href="#getinvmax">GetInvMax</a></li>
+<li><a href="#playkey">PlayKey</a></li>
+<li><a href="#playkeyex">PlayKeyEx</a></li>
+<li><a href="#stopkey">StopKey</a></li>
+<li><a href="#pausekey">PauseKey</a></li>
+<li><a href="#resumekey">ResumeKey</a></li>
+<li><a href="#setthingmodel">SetThingModel</a></li>
+<li><a href="#getthingmodel">GetThingModel</a></li>
+<li><a href="#playmode">PlayMode</a></li>
+<li><a href="#stopmode">StopMode</a></li>
+<li><a href="#synchmode">SynchMode</a></li>
+<li><a href="#ismodeplaying">IsModePlaying</a></li>
+<li><a href="#pausemode">PauseMode</a></li>
+<li><a href="#resumemode">ResumeMode</a></li>
+<li><a href="#tracktomode">TrackToMode</a></li>
+<li><a href="#waitmode">WaitMode</a></li>
+<li><a href="#getmajormode">GetMajorMode</a></li>
+<li><a href="#firstthinginsector">FirstThingInSector</a></li>
+<li><a href="#nextthinginsector">NextThingInSector</a></li>
+<li><a href="#prevthinginsector">PrevThingInSector</a></li>
+<li><a href="#movetoframe">MoveToFrame</a></li>
+<li><a href="#skiptoframe">SkipToFrame</a></li>
+<li><a href="#jumptoframe">JumpToFrame</a></li>
+<li><a href="#pathmovepause">PathMovePause</a></li>
+<li><a href="#pathmoveresume">PathMoveResume</a></li>
+<li><a href="#rotate">Rotate</a></li>
+<li><a href="#rotatepivot">RotatePivot</a></li>
+<li><a href="#rotatetopyr">RotateToPYR</a></li>
+<li><a href="#getthingtemplate">GetThingTemplate</a></li>
+<li><a href="#damagething">DamageThing</a></li>
+<li><a href="#setlifeleft">SetLifeLeft</a></li>
+<li><a href="#getlifeleft">GetLifeLeft</a></li>
+<li><a href="#setthingthrust">SetThingThrust</a></li>
+<li><a href="#getthingthrust">GetThingThrust</a></li>
+<li><a href="#setthinghealth">SetThingHealth</a></li>
+<li><a href="#sethealth">SetHealth</a></li>
+<li><a href="#amputatejoint">AmputateJoint</a></li>
+<li><a href="#setactorweapon">SetActorWeapon</a></li>
+<li><a href="#getactorweapon">GetActorWeapon</a></li>
+<li><a href="#getphysicsflags">GetPhysicsFlags</a></li>
+<li><a href="#setphysicsflags">SetPhysicsFlags</a></li>
+<li><a href="#clearphysicsflags">ClearPhysicsFlags</a></li>
+<li><a href="#parsearg">ParseArg</a></li>
+<li><a href="#getthingrotvel">GetThingRotVel</a></li>
+<li><a href="#setthingrotvel">SetThingRotVel</a></li>
+<li><a href="#getthingrotthrust">GetThingRotThrust</a></li>
+<li><a href="#setthingrotthrust">SetThingRotThrust</a></li>
+<li><a href="#setthinglook">SetThingLook</a></li>
+<li><a href="#setthingheadlookpos">SetThingHeadLookPos</a></li>
+<li><a href="#setthingheadlookthing">SetThingHeadLookThing</a></li>
+<li><a href="#isthingcrouching">IsThingCrouching</a></li>
+<li><a href="#iscrouching">IsCrouching</a></li>
+<li><a href="#getthingclasscog">GetThingClassCog</a></li>
+<li><a href="#setthingclasscog">SetThingClassCog</a></li>
+<li><a href="#getthingcapturecog">GetThingCaptureCog</a></li>
+<li><a href="#setthingcapturecog">SetThingCaptureCog</a></li>
+<li><a href="#getthingrespawn">GetThingRespawn</a></li>
+<li><a href="#getthingsignature">GetThingSignature</a></li>
+<li><a href="#setthingattachflags">SetThingAttachFlags</a></li>
+<li><a href="#clearthingattachflags">ClearThingAttachFlags</a></li>
+<li><a href="#getparticlesize">GetParticleSize</a></li>
+<li><a href="#setparticlesize">SetParticleSize</a></li>
+<li><a href="#getparticlegrowthspeed">GetParticleGrowthSpeed</a></li>
+<li><a href="#setparticlegrowthspeed">SetParticleGrowthSpeed</a></li>
+<li><a href="#getparticletimeoutrate">GetParticleTimeoutRate</a></li>
+<li><a href="#setparticletimeoutrate">SetParticleTimeoutRate</a></li>
+<li><a href="#gettypeflags">GetTypeFlags</a></li>
+<li><a href="#settypeflags">SetTypeFlags</a></li>
+<li><a href="#cleartypeflags">ClearTypeFlags</a></li>
+<li><a href="#getactorflags">GetActorFlags</a></li>
+<li><a href="#setactorflags">SetActorFlags</a></li>
+<li><a href="#clearactorflags">ClearActorFlags</a></li>
+<li><a href="#getweaponflags">GetWeaponFlags</a></li>
+<li><a href="#setweaponflags">SetWeaponFlags</a></li>
+<li><a href="#clearweaponflags">ClearWeaponFlags</a></li>
+<li><a href="#getexplosionflags">GetExplosionFlags</a></li>
+<li><a href="#setexplosionflags">SetExplosionFlags</a></li>
+<li><a href="#clearexplosionflags">ClearExplosionFlags</a></li>
+<li><a href="#getitemflags">GetItemFlags</a></li>
+<li><a href="#setitemflags">SetItemFlags</a></li>
+<li><a href="#clearitemflags">ClearItemFlags</a></li>
+<li><a href="#getparticleflags">GetParticleFlags</a></li>
+<li><a href="#setparticleflags">SetParticleFlags</a></li>
+<li><a href="#clearparticleflags">ClearParticleFlags</a></li>
+<li><a href="#takeitem">TakeItem</a></li>
+<li><a href="#haslos">HasLOS</a></li>
+<li><a href="#getthingfireoffset">GetThingFireOffset</a></li>
+<li><a href="#setthingfireoffset">SetThingFireOffset</a></li>
+<li><a href="#getthinguserdata">GetThingUserData</a></li>
+<li><a href="#setthinguserdata">SetThingUserData</a></li>
+<li><a href="#getthingcollidesize">GetThingCollideSize</a></li>
+<li><a href="#setthingcollidesize">SetThingCollideSize</a></li>
+<li><a href="#getthingmovesize">GetThingMoveSize</a></li>
+<li><a href="#setthingmovesize">SetThingMoveSize</a></li>
+<li><a href="#getthingmass">GetThingMass</a></li>
+<li><a href="#setthingmass">SetThingMass</a></li>
+<li><a href="#syncthingpos">SyncThingPos</a></li>
+<li><a href="#syncthingattachment">SyncThingAttachment</a></li>
+<li><a href="#syncthingstate">SyncThingState</a></li>
+<li><a href="#attachthingtothingex">AttachThingToThingEx</a></li>
+<li><a href="#getthingattachedthing">GetThingAttachedThing</a></li>
+<li><a href="#getmeshbyname">GetMeshByName</a></li>
+<li><a href="#getnodebyname">GetNodeByName</a></li>
+<li><a href="#attachthingtothingmesh">AttachThingToThingMesh</a></li>
+<li><a href="#detachthingmesh">DetachThingMesh</a></li>
+<li><a href="#setthingmesh">SetThingMesh</a></li>
+<li><a href="#restorethingmesh">RestoreThingMesh</a></li>
+<li><a href="#getthingalpha">GetThingAlpha</a></li>
+<li><a href="#setthingalpha">SetThingAlpha</a></li>
+<li><a href="#getcamerafov">GetCameraFOV</a></li>
+<li><a href="#setcamerafov">SetCameraFOV</a></li>
+<li><a href="#resetcamerafov">ResetCameraFOV</a></li>
+<li><a href="#setcameralookinterp">SetCameraLookInterp</a></li>
+<li><a href="#setcameraposinterp">SetCameraPosInterp</a></li>
+<li><a href="#setcamerainterpspeed">SetCameraInterpSpeed</a></li>
+<li><a href="#setcameraposition">SetCameraPosition</a></li>
+<li><a href="#animatespritesize">AnimateSpriteSize</a></li>
+<li><a href="#getcameraposition">GetCameraPosition</a></li>
+<li><a href="#setcamerafadething">SetCameraFadeThing</a></li>
+<li><a href="#setextcamoffset">SetExtCamOffset</a></li>
+<li><a href="#setextcamoffsettothing">SetExtCamOffsetToThing</a></li>
+<li><a href="#setextcamlookoffsettothing">SetExtCamLookOffsetToThing</a></li>
+<li><a href="#setextcamlookoffset">SetExtCamLookOffset</a></li>
+<li><a href="#restoreextcam">RestoreExtCam</a></li>
+<li><a href="#playforcemovemode">PlayForceMoveMode</a></li>
+<li><a href="#isthingautoaiming">IsThingAutoAiming</a></li>
+<li><a href="#getmovestatus">GetMoveStatus</a></li>
+<li><a href="#createlaser">CreateLaser</a></li>
+<li><a href="#createlightning">CreateLightning</a></li>
+<li><a href="#makefairydust">MakeFairyDust</a></li>
+<li><a href="#makefairydustdeluxe">MakeFairyDustDeluxe</a></li>
+<li><a href="#setpuppetmodefps">SetPuppetModeFPS</a></li>
+<li><a href="#setmovemode">SetMoveMode</a></li>
+<li><a href="#checkfloordistance">CheckFloorDistance</a></li>
+<li><a href="#checkpathtopoint">CheckPathToPoint</a></li>
+<li><a href="#setthingstatechange">SetThingStateChange</a></li>
+<li><a href="#createpolylinething">CreatePolylineThing</a></li>
+<li><a href="#startquetzanim">StartQuetzAnim</a></li>
+<li><a href="#boardvehicle">BoardVehicle</a></li>
+<li><a href="#fadeintrack">FadeInTrack</a></li>
+<li><a href="#isghostvisible">IsGhostVisible</a></li>
+<li><a href="#makecamera2likecamera1">MakeCamera2LikeCamera1</a></li>
+</ul>
+<h2 id="waitforstop">WaitForStop</h2>
+<div class="highlight"><pre><span></span><code>WaitForStop(Thing thing)
+</code></pre></div>
+<h2 id="waitforanimstop">WaitForAnimStop</h2>
+<div class="highlight"><pre><span></span><code>WaitForAnimStop(int animID)
+</code></pre></div>
+<h2 id="stopthing">StopThing</h2>
+<div class="highlight"><pre><span></span><code>StopThing(Thing thing)
+</code></pre></div>
+<h2 id="destroything">DestroyThing</h2>
+<div class="highlight"><pre><span></span><code>DestroyThing(Thing thing)
+</code></pre></div>
+<h2 id="getthinghealth">GetThingHealth</h2>
+<div class="highlight"><pre><span></span><code>GetThingHealth(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="getthingmaxhealth">GetThingMaxHealth</h2>
+<div class="highlight"><pre><span></span><code>GetThingMaxHealth(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="gethealth">GetHealth</h2>
+<div class="highlight"><pre><span></span><code>GetHealth(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="healthing">HealThing</h2>
+<div class="highlight"><pre><span></span><code>HealThing(Thing thing, float health)
+</code></pre></div>
+<h2 id="getthinglight">GetThingLight</h2>
+<div class="highlight"><pre><span></span><code>GetThingLight(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthinglight">SetThingLight</h2>
+<div class="highlight"><pre><span></span><code>SetThingLight(Thing thing, Vector value, float maxRadius, float timeDelta)
+</code></pre></div>
+<h2 id="thinglight">ThingLight</h2>
+<div class="highlight"><pre><span></span><code>ThingLight(Thing thing, Vector value, float maxRadius, float timeDelta)
+</code></pre></div>
+<h2 id="thinglightanim">ThingLightAnim</h2>
+<div class="highlight"><pre><span></span><code>ThingLightAnim(Thing thing, Vector startColor, float startRadius, Vector value, float endRadius, float speed) -&gt; int
+</code></pre></div>
+<h2 id="thingfadeanim">ThingFadeAnim</h2>
+<div class="highlight"><pre><span></span><code>ThingFadeAnim(Thing thing, float startAlpha, float endAlpha, float timeDelta, int bLoop) -&gt; int
+</code></pre></div>
+<h2 id="creatething">CreateThing</h2>
+<div class="highlight"><pre><span></span><code>CreateThing(Template template, Thing refThing) -&gt; int
+</code></pre></div>
+<h2 id="createthingatpos">CreateThingAtPos</h2>
+<div class="highlight"><pre><span></span><code>CreateThingAtPos(Template template, Sector sector, Vector pos, Vector pyr) -&gt; int
+</code></pre></div>
+<h2 id="capturething">CaptureThing</h2>
+<div class="highlight"><pre><span></span><code>CaptureThing(Thing thing)
+</code></pre></div>
+<h2 id="releasething">ReleaseThing</h2>
+<div class="highlight"><pre><span></span><code>ReleaseThing(Thing thing)
+</code></pre></div>
+<h2 id="setthingvel">SetThingVel</h2>
+<div class="highlight"><pre><span></span><code>SetThingVel(Thing thing, Vector vel)
+</code></pre></div>
+<h2 id="addthingvel">AddThingVel</h2>
+<div class="highlight"><pre><span></span><code>AddThingVel(Thing thing, Vector vel)
+</code></pre></div>
+<h2 id="applyforce">ApplyForce</h2>
+<div class="highlight"><pre><span></span><code>ApplyForce(Thing thing, Vector vec)
+</code></pre></div>
+<h2 id="detachthing">DetachThing</h2>
+<div class="highlight"><pre><span></span><code>DetachThing(Thing thing)
+</code></pre></div>
+<h2 id="getattachflags">GetAttachFlags</h2>
+<div class="highlight"><pre><span></span><code>GetAttachFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getthingattachflags">GetThingAttachFlags</h2>
+<div class="highlight"><pre><span></span><code>GetThingAttachFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="attachthingtosurf">AttachThingToSurf</h2>
+<div class="highlight"><pre><span></span><code>AttachThingToSurf(Thing thing, Surface surf)
+</code></pre></div>
+<h2 id="attachthingtothing">AttachThingToThing</h2>
+<div class="highlight"><pre><span></span><code>AttachThingToThing(Thing thing, Thing attachThing)
+</code></pre></div>
+<h2 id="setarmedmode">SetArmedMode</h2>
+<p><div class="highlight"><pre><span></span><code>SetArmedMode(Thing thing, int armedMode)
+</code></pre></div>
+Sets puppet <a href="../pup.md#pup-armed-modes"><code>armed mode</code></a> for <code>thing</code> object.<br />
+The object needs to have both a model and puppet object assigned.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to set new armed mode.
+ * armedMode - The <a href="../pup.md#pup-move-modes"><code>puppet armed mode</code></a> number (0-7).</p>
+<h2 id="setthingflags">SetThingFlags</h2>
+<div class="highlight"><pre><span></span><code>SetThingFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="clearthingflags">ClearThingFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearThingFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="teleportthing">TeleportThing</h2>
+<div class="highlight"><pre><span></span><code>TeleportThing(Thing destThing, Thing srcThing)
+</code></pre></div>
+<h2 id="setthingtype">SetThingType</h2>
+<div class="highlight"><pre><span></span><code>SetThingType(Thing thing, int type)
+</code></pre></div>
+<h2 id="setcollidetype">SetCollideType</h2>
+<div class="highlight"><pre><span></span><code>SetCollideType(Thing thing, int type)
+</code></pre></div>
+<h2 id="setheadlightintensity">SetHeadLightIntensity</h2>
+<div class="highlight"><pre><span></span><code>SetHeadLightIntensity(Thing thing, Vector color) -&gt; Vector
+</code></pre></div>
+<h2 id="getthingcurlightmode">GetThingCurLightMode</h2>
+<div class="highlight"><pre><span></span><code>GetThingCurLightMode(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setthingcurlightmode">SetThingCurLightMode</h2>
+<div class="highlight"><pre><span></span><code>SetThingCurLightMode(Thing thing, int mode)
+</code></pre></div>
+<h2 id="setactorextraspeed">SetActorExtraSpeed</h2>
+<div class="highlight"><pre><span></span><code>SetActorExtraSpeed(Thing thing, float speed)
+</code></pre></div>
+<h2 id="setthingposex">SetThingPosEx</h2>
+<div class="highlight"><pre><span></span><code>SetThingPosEx(Thing thing, Vector vecPos, Sector sector) -&gt; int
+</code></pre></div>
+<h2 id="setthingmaxvel">SetThingMaxVel</h2>
+<div class="highlight"><pre><span></span><code>SetThingMaxVel(Thing thing, float maxSpeed)
+</code></pre></div>
+<h2 id="setthingmaxangvel">SetThingMaxAngVel</h2>
+<div class="highlight"><pre><span></span><code>SetThingMaxAngVel(Thing thing, float maxRotSpeed)
+</code></pre></div>
+<h2 id="setthingjointangle">SetThingJointAngle</h2>
+<div class="highlight"><pre><span></span><code>SetThingJointAngle(Thing thing, int jointNum, float angle)
+</code></pre></div>
+<h2 id="setthingmaxheadpitch">SetThingMaxHeadPitch</h2>
+<div class="highlight"><pre><span></span><code>SetThingMaxHeadPitch(Thing thing, float maxPitch) -&gt; float
+</code></pre></div>
+<h2 id="setthingminheadpitch">SetThingMinHeadPitch</h2>
+<div class="highlight"><pre><span></span><code>SetThingMinHeadPitch(Thing thing, float minPitch) -&gt; float
+</code></pre></div>
+<h2 id="getthingmaxheadpitch">GetThingMaxHeadPitch</h2>
+<div class="highlight"><pre><span></span><code>GetThingMaxHeadPitch(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="getthingminheadpitch">GetThingMinHeadPitch</h2>
+<div class="highlight"><pre><span></span><code>GetThingMinHeadPitch(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setthingmaxheadyaw">SetThingMaxHeadYaw</h2>
+<div class="highlight"><pre><span></span><code>SetThingMaxHeadYaw(Thing thing, float maxYaw) -&gt; float
+</code></pre></div>
+<h2 id="getthingmaxheadyaw">GetThingMaxHeadYaw</h2>
+<div class="highlight"><pre><span></span><code>GetThingMaxHeadYaw(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setthinglvecpyr">SetThingLVecPYR</h2>
+<div class="highlight"><pre><span></span><code>SetThingLVecPYR(Thing thing, Vector lvec)
+</code></pre></div>
+<h2 id="setactorheadpyr">SetActorHeadPYR</h2>
+<div class="highlight"><pre><span></span><code>SetActorHeadPYR(Thing thing, Vector pyr)
+</code></pre></div>
+<h2 id="setthingairdrag">SetThingAirDrag</h2>
+<div class="highlight"><pre><span></span><code>SetThingAirDrag(Thing thing, float drag)
+</code></pre></div>
+<h2 id="setthingmaxrotvel">SetThingMaxRotVel</h2>
+<div class="highlight"><pre><span></span><code>SetThingMaxRotVel(Thing thing, float vel)
+</code></pre></div>
+<h2 id="setthingmaxheadvel">SetThingMaxHeadVel</h2>
+<div class="highlight"><pre><span></span><code>SetThingMaxHeadVel(Thing thing, float vel)
+</code></pre></div>
+<h2 id="resetthing">ResetThing</h2>
+<div class="highlight"><pre><span></span><code>ResetThing(Thing thing)
+</code></pre></div>
+<h2 id="movething">MoveThing</h2>
+<div class="highlight"><pre><span></span><code>MoveThing(Thing thing, Vector vecDirection, float moveDist, float timeDelta) -&gt; int
+</code></pre></div>
+<h2 id="movethingtopos">MoveThingToPos</h2>
+<div class="highlight"><pre><span></span><code>MoveThingToPos(Thing thing, Vector pos, float time) -&gt; int
+</code></pre></div>
+<h2 id="getthingtype">GetThingType</h2>
+<div class="highlight"><pre><span></span><code>GetThingType(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="isthingmoving">IsThingMoving</h2>
+<div class="highlight"><pre><span></span><code>IsThingMoving(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="ismoving">IsMoving</h2>
+<div class="highlight"><pre><span></span><code>IsMoving(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getcurframe">GetCurFrame</h2>
+<div class="highlight"><pre><span></span><code>GetCurFrame(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getgoalframe">GetGoalFrame</h2>
+<div class="highlight"><pre><span></span><code>GetGoalFrame(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getthingparent">GetThingParent</h2>
+<div class="highlight"><pre><span></span><code>GetThingParent(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getthingsector">GetThingSector</h2>
+<div class="highlight"><pre><span></span><code>GetThingSector(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getthingpos">GetThingPos</h2>
+<div class="highlight"><pre><span></span><code>GetThingPos(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthingpos">SetThingPos</h2>
+<div class="highlight"><pre><span></span><code>SetThingPos(Thing thing, Vector newPos) -&gt; int
+</code></pre></div>
+<h2 id="getthingvel">GetThingVel</h2>
+<div class="highlight"><pre><span></span><code>GetThingVel(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="getthinguvec">GetThingUVec</h2>
+<div class="highlight"><pre><span></span><code>GetThingUVec(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="getthinglvec">GetThingLVec</h2>
+<div class="highlight"><pre><span></span><code>GetThingLVec(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="getthingrvec">GetThingRVec</h2>
+<div class="highlight"><pre><span></span><code>GetThingRVec(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="getthingflags">GetThingFlags</h2>
+<div class="highlight"><pre><span></span><code>GetThingFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getcollidetype">GetCollideType</h2>
+<div class="highlight"><pre><span></span><code>GetCollideType(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getheadlightintensity">GetHeadLightIntensity</h2>
+<div class="highlight"><pre><span></span><code>GetHeadLightIntensity(Thing thing, Vector color) -&gt; Vector
+</code></pre></div>
+<h2 id="isthingvisible">IsThingVisible</h2>
+<div class="highlight"><pre><span></span><code>IsThingVisible(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getthingguid">GetThingGuid</h2>
+<div class="highlight"><pre><span></span><code>GetThingGuid(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getguidthing">GetGuidThing</h2>
+<div class="highlight"><pre><span></span><code>GetGuidThing(int guid) -&gt; int
+</code></pre></div>
+<h2 id="getthingmaxvel">GetThingMaxVel</h2>
+<div class="highlight"><pre><span></span><code>GetThingMaxVel(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="getthingmaxangvel">GetThingMaxAngVel</h2>
+<div class="highlight"><pre><span></span><code>GetThingMaxAngVel(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="getthingjointangle">GetThingJointAngle</h2>
+<div class="highlight"><pre><span></span><code>GetThingJointAngle(Thing thing, int jointNum) -&gt; float
+</code></pre></div>
+<h2 id="interpolatepyr">InterpolatePYR</h2>
+<div class="highlight"><pre><span></span><code>InterpolatePYR(Vector axisX, Vector axisY, Vector axisZ, float angle) -&gt; Vector
+</code></pre></div>
+<h2 id="getthinglvecpyr">GetThingLVecPYR</h2>
+<div class="highlight"><pre><span></span><code>GetThingLVecPYR(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="getactorheadpyr">GetActorHeadPYR</h2>
+<div class="highlight"><pre><span></span><code>GetActorHeadPYR(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="getthingjointpos">GetThingJointPos</h2>
+<div class="highlight"><pre><span></span><code>GetThingJointPos(Thing thing, int jointNum) -&gt; Vector
+</code></pre></div>
+<h2 id="isthingmodelname">IsThingModelName</h2>
+<div class="highlight"><pre><span></span><code>IsThingModelName(Thing thing, string modelName) -&gt; int
+</code></pre></div>
+<h2 id="getthingmaxrotvel">GetThingMaxRotVel</h2>
+<div class="highlight"><pre><span></span><code>GetThingMaxRotVel(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="getthingmaxheadvel">GetThingMaxHeadVel</h2>
+<div class="highlight"><pre><span></span><code>GetThingMaxHeadVel(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="copyorient">CopyOrient</h2>
+<div class="highlight"><pre><span></span><code>CopyOrient(Thing srcThing, Thing destThing)
+</code></pre></div>
+<h2 id="copyorientandpos">CopyOrientAndPos</h2>
+<div class="highlight"><pre><span></span><code>CopyOrientAndPos(Thing srcThing, Thing dstThing)
+</code></pre></div>
+<h2 id="getthinginsertoffset">GetThingInsertOffset</h2>
+<div class="highlight"><pre><span></span><code>GetThingInsertOffset(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthinginsertoffset">SetThingInsertOffset</h2>
+<div class="highlight"><pre><span></span><code>SetThingInsertOffset(Thing thing, Vector offset) -&gt; Vector
+</code></pre></div>
+<h2 id="getthingeyeoffset">GetThingEyeOffset</h2>
+<div class="highlight"><pre><span></span><code>GetThingEyeOffset(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthingpulse">SetThingPulse</h2>
+<div class="highlight"><pre><span></span><code>SetThingPulse(Thing thing, float secPulse)
+</code></pre></div>
+<h2 id="setthingtimer">SetThingTimer</h2>
+<div class="highlight"><pre><span></span><code>SetThingTimer(Thing thing, float secTimer)
+</code></pre></div>
+<h2 id="getinv">GetInv</h2>
+<div class="highlight"><pre><span></span><code>GetInv(Thing thing, int typeId) -&gt; float
+</code></pre></div>
+<h2 id="setinv">SetInv</h2>
+<div class="highlight"><pre><span></span><code>SetInv(Thing thing, int typeId, float amount)
+</code></pre></div>
+<h2 id="changeinv">ChangeInv</h2>
+<div class="highlight"><pre><span></span><code>ChangeInv(Thing thing, int typeId, float amount) -&gt; float
+</code></pre></div>
+<h2 id="getinvcog">GetInvCog</h2>
+<div class="highlight"><pre><span></span><code>GetInvCog(Thing thing, int typeId) -&gt; int
+</code></pre></div>
+<h2 id="getinvmin">GetInvMin</h2>
+<div class="highlight"><pre><span></span><code>GetInvMin(Thing thing, int bin) -&gt; float
+</code></pre></div>
+<h2 id="getinvmax">GetInvMax</h2>
+<div class="highlight"><pre><span></span><code>GetInvMax(Thing thing, int bin) -&gt; float
+</code></pre></div>
+<h2 id="playkey">PlayKey</h2>
+<p><div class="highlight"><pre><span></span><code>PlayKey(Thing thing, Keyframe key, int lowPriority, int playFlags, int bWait) -&gt; int
+</code></pre></div>
+Plays puppet <code>key</code> animation for <code>thing</code> object.<br />
+The object needs to have both a model and puppet object assigned.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> -  The game object to play the <code>key</code> animation. The object has to have model and puppet set.
+ * <code>key</code> - The keyframe animation to play.
+ * <code>lowPriority</code>- The <a href="../pup.md#pup-low-pri">low-priority</a> value of puppet animated joints with low priority.<br />
+  The high priority is set to <code>lowPriority</code> + 2.
+ * <code>playFlags</code> - The <a href="../pup.md#pup-flags">puppet track flags</a>.
+ * <code>bWait</code> -  If 1 - True wait for the animation to finish playing.</p>
+<p><strong>Return</strong><br />
+  Returns the track number where the <code>key</code> is being played.</p>
+<h2 id="playkeyex">PlayKeyEx</h2>
+<p><div class="highlight"><pre><span></span><code>PlayKeyEx(Thing thing, Keyframe key, int lowPriority, int highPriority, int playFlags, int bWait) -&gt; int
+</code></pre></div>
+Plays puppet <code>key</code> animation for <code>thing</code> object.<br />
+The object needs to have both a model and puppet object assigned.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> -  The game object to play the <code>key</code> animation.
+ * <code>key</code> - The keyframe animation to play.
+ * <code>lowPriority</code>- The <a href="../pup.md#pup-low-pri">low-priority</a> value of puppet animated joints with low priority.
+ * <code>highPriority</code>- The <a href="../pup.md#pup-low-pri">heigh-priority</a> value of puppet animated joints with high priority.
+ * <code>playFlags</code> - The <a href="../pup.md#pup-flags">puppet track flags</a>.
+ * <code>bWait</code> -  If 1 - True wait for the animation to finish playing.</p>
+<p><strong>Return</strong><br />
+  Returns the track number where the <code>key</code> is being played.</p>
+<h2 id="stopkey">StopKey</h2>
+<p><div class="highlight"><pre><span></span><code>StopKey(Thing thing, int trackNum, float fadeTime)
+</code></pre></div>
+Stops the playback of the animation track for the <code>thing</code> object.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to stop the <code>track</code> animation. The object has to have model and puppet set.
+ * <code>trackNum</code> - Puppet track number to stop playing.
+ * <code>fadeTime</code> - Animation stop fade-out time in seconds. Must be greater than or equal to 0.</p>
+<h2 id="pausekey">PauseKey</h2>
+<p><div class="highlight"><pre><span></span><code>PauseKey(Thing thing, int trackNum) -&gt; int
+</code></pre></div>
+Pauses <code>thing</code>'s puppet track animation.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to pause the <code>track</code> animation.
+ * <code>trackNum</code> - Puppet track number to pause playing.</p>
+<p><strong>Return</strong><br />
+  On success 1 is returned, otherwise -1.</p>
+<h2 id="resumekey">ResumeKey</h2>
+<p><div class="highlight"><pre><span></span><code>ResumeKey(Thing thing, int trackNum) -&gt; int
+</code></pre></div>
+Resumes paused <code>thing</code> puppet <code>track</code> animation.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to resume the <code>track</code> animation.
+ * <code>trackNum</code> - Puppet track number to resume playing.</p>
+<p><strong>Return</strong><br />
+  On success 1 is returned, otherwise -1.</p>
+<h2 id="setthingmodel">SetThingModel</h2>
+<div class="highlight"><pre><span></span><code>SetThingModel(Thing thing, Model model) -&gt; int
+</code></pre></div>
+<h2 id="getthingmodel">GetThingModel</h2>
+<div class="highlight"><pre><span></span><code>GetThingModel(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="playmode">PlayMode</h2>
+<p><div class="highlight"><pre><span></span><code>PlayMode(Thing thing, int submode, int bWait) -&gt; int
+</code></pre></div>
+Plays <a href="../pup.md#sub-mode-list">puppet submode</a> animation for <code>thing</code> object.<br />
+The object needs to have both a model and puppet object assigned.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to play the <code>submode</code> track.
+ * <code>submode</code>- The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number to play.
+ * <code>bWait</code> - If 1 - True wait for the submode animation to finish playing.</p>
+<p><strong>Return</strong><br />
+  Returns the track number where the <code>submode</code> animation is being played.</p>
+<h2 id="stopmode">StopMode</h2>
+<p><div class="highlight"><pre><span></span><code>StopMode(Thing thing, int submode, float fadeTime)
+</code></pre></div>
+Stops playing <a href="../pup.md#sub-mode-list"><code>puppet submode</code></a> track for <code>thing</code> object.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to stop the <code>submode</code> track.
+ * <code>submode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number to stop playing. 
+ * <code>fadeTime</code> - Animation stop fade-out time in seconds. Must be greater than or equal to 0.</p>
+<h2 id="synchmode">SynchMode</h2>
+<p><div class="highlight"><pre><span></span><code>SynchMode(Thing thing, int oldMode, int newMode, float unknown/unused, int bReverse)
+</code></pre></div>
+Synchronizes <a href="../pup.md#sub-mode-list">puppet submode</a> track from old to new for <code>thing</code> object.<br />
+That is, stops playing <code>old</code> submode track and starts playing the <code>new</code> submode track at the same animation frame where the <code>old</code> was stopped.</p>
+<p>Synchronizes the puppet <a href="../pup.md#sub-mode-list"><code>submode</code> track</a> track from the old mode to the new mode for the <code>thing</code> object. This stops playing the old <a href="../pup.md#sub-mode-list"><code>submode</code> track</a> track and starts playing the new <a href="../pup.md#sub-mode-list"><code>submode</code> track</a> track from the same animation frame where the old track was stopped.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to play the <code>submode</code> track.
+ * <code>oldMode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number to sync from.
+ * <code>newMode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number to sync to.
+ * <code>unused</code> - Not used
+ * <code>bReversed</code></p>
+<h2 id="ismodeplaying">IsModePlaying</h2>
+<p><div class="highlight"><pre><span></span><code>IsModePlaying(Thing thing, int submode) -&gt; int
+</code></pre></div>
+Checks if <a href="../pup.md#sub-mode-list"><code>puppet submode</code></a> track is playing at the moment for the <code>thing</code>.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to check the <code>submode</code> track. The object has to have model and puppet set.
+ * <code>submode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number to check.</p>
+<p><strong>Return</strong><br />
+  Returns 0 if submode track is not playing, 1 if submode track is playing and 2 if submode track is paused. On error -1 is returned.</p>
+<h2 id="pausemode">PauseMode</h2>
+<p><div class="highlight"><pre><span></span><code>PauseMode(Thing thing, int submode) -&gt; int
+</code></pre></div>
+Pauses the <a href="../pup.md#sub-mode-list"><code>puppet submode</code></a> track for <code>thing</code>.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to pause the <code>submode</code> track. The object has to have model and puppet set.
+ * <code>submode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number to pause playing.</p>
+<p><strong>Return</strong><br />
+  Returns 0 if submode track is not playing, 1 if submode track was paused and 2 if submode track is already paused. On error -1 is returned.</p>
+<h2 id="resumemode">ResumeMode</h2>
+<p><div class="highlight"><pre><span></span><code>ResumeMode(Thing thing, int submode) -&gt; int
+</code></pre></div>
+Resumes playing <a href="../pup.md#sub-mode-list"><code>puppet submode</code></a> track animation for <code>thing</code> object.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to resume playing the <code>submode</code> track.
+* <code>submode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number to resume playing.</p>
+<p><strong>Return</strong>
+   - 0 if submode track is not playing
+   - 1 if submode track is resumed to play
+   - 2 if submode track is not paused</p>
+<p>On error -1 is returned.</p>
+<h2 id="tracktomode">TrackToMode</h2>
+<p><div class="highlight"><pre><span></span><code>TrackToMode(Thing thing, int trackNum) -&gt; int
+</code></pre></div>
+Returns the <a href="../pup.md#sub-mode-list"><code>puppet submode</code></a> number of the <code>thing</code> object for the specified track number.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - Playing track number to retrieve <a href="../pup.md#sub-mode-list"><code>submode</code></a>.
+ * <code>trackNum</code> - Track number of the playing track from which to retrieve the <a href="../pup.md#sub-mode-list"><code>submode</code></a>.</p>
+<p><strong>Return</strong><br />
+  On success <a href="../pup.md#sub-mode-list"><code>puppet submode</code></a> number is returned.<br />
+  On error -1 is returned e.g. invalid <code>track</code> number.</p>
+<h2 id="waitmode">WaitMode</h2>
+<p><div class="highlight"><pre><span></span><code>WaitMode(Thing thing, int submode) -&gt; int
+</code></pre></div>
+Waits for the <a href="../pup.md#pup-move-modes"><code>puppet submode</code></a> track to finish playing.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object for which to wait until the track has finished playing.
+ * <code>submode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number.</p>
+<p><strong>Return</strong><br />
+  If <code>submode</code> is playing 1 is returned, otherwise 0.<br />
+  On error -1 is returned.</p>
+<h2 id="getmajormode">GetMajorMode</h2>
+<p><div class="highlight"><pre><span></span><code>GetMajorMode(Thing thing) -&gt; int
+</code></pre></div>
+Returns the current <a href="../pup.md#mode"><code>major mode</code></a> for the <code>object</code>'s puppet.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to retrieve the current major mode. The object has to have model and puppet set.</p>
+<p><strong>Return</strong><br />
+  On success current major mode number is returned. On error -1 is returned.</p>
+<h2 id="firstthinginsector">FirstThingInSector</h2>
+<div class="highlight"><pre><span></span><code>FirstThingInSector(Sector thing) -&gt; int
+</code></pre></div>
+<h2 id="nextthinginsector">NextThingInSector</h2>
+<div class="highlight"><pre><span></span><code>NextThingInSector(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="prevthinginsector">PrevThingInSector</h2>
+<div class="highlight"><pre><span></span><code>PrevThingInSector(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="movetoframe">MoveToFrame</h2>
+<div class="highlight"><pre><span></span><code>MoveToFrame(Thing thing, int frame, float speed)
+</code></pre></div>
+<h2 id="skiptoframe">SkipToFrame</h2>
+<div class="highlight"><pre><span></span><code>SkipToFrame(Thing thing, int frame, float speed)
+</code></pre></div>
+<h2 id="jumptoframe">JumpToFrame</h2>
+<div class="highlight"><pre><span></span><code>JumpToFrame(Thing thing, int frame, Sector sector)
+</code></pre></div>
+<h2 id="pathmovepause">PathMovePause</h2>
+<div class="highlight"><pre><span></span><code>PathMovePause(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="pathmoveresume">PathMoveResume</h2>
+<div class="highlight"><pre><span></span><code>PathMoveResume(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="rotate">Rotate</h2>
+<div class="highlight"><pre><span></span><code>Rotate(Thing thing, float degrees, int axis, float rotTime)
+</code></pre></div>
+<h2 id="rotatepivot">RotatePivot</h2>
+<div class="highlight"><pre><span></span><code>RotatePivot(Thing thing, int frame, float v7)
+</code></pre></div>
+<h2 id="rotatetopyr">RotateToPYR</h2>
+<div class="highlight"><pre><span></span><code>RotateToPYR(Thing thing, Vector pyr, float time)
+</code></pre></div>
+<h2 id="getthingtemplate">GetThingTemplate</h2>
+<div class="highlight"><pre><span></span><code>GetThingTemplate(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="damagething">DamageThing</h2>
+<p><div class="highlight"><pre><span></span><code>DamageThing(Thing victim, float damage, int damageclass, Thing source) -&gt; float
+</code></pre></div>
+Damages <code>victim</code> game object.</p>
+<p><strong>Parameters</strong>:
+ * <code>victim</code> - The game object to damage.
+ * <code>damage</code> - The amount of damage to apply to <code>victim</code>.
+ * <code>damageclass</code> - The <a href="../flags.md#damage-class-flags">damage class type</a> to use for damage.
+ * <code>source</code> - The game object that inflicted the damage.</p>
+<p><strong>Return</strong><br />
+  Returns the amount of actual damage applied to <code>victim</code>.</p>
+<h2 id="setlifeleft">SetLifeLeft</h2>
+<p><div class="highlight"><pre><span></span><code>SetLifeLeft(Thing thing, float secLeft)
+</code></pre></div>
+Sets the time to live for a game object.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object whose life left is being set.
+ * <code>secLeft</code> - The number of seconds the object will live for.</p>
+<h2 id="getlifeleft">GetLifeLeft</h2>
+<p><div class="highlight"><pre><span></span><code>GetLifeLeft(Thing thing) -&gt; float
+</code></pre></div>
+Gets the remaining time to live for a game object.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object whose remaining life time is being retrieved.</p>
+<p><strong>Return</strong><br />
+The number of seconds the object has left to live.</p>
+<h2 id="setthingthrust">SetThingThrust</h2>
+<div class="highlight"><pre><span></span><code>SetThingThrust(Thing thing, Vector thrust) -&gt; Vector
+</code></pre></div>
+<h2 id="getthingthrust">GetThingThrust</h2>
+<div class="highlight"><pre><span></span><code>GetThingThrust(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthinghealth">SetThingHealth</h2>
+<div class="highlight"><pre><span></span><code>SetThingHealth(Thing thing, float health)
+</code></pre></div>
+<h2 id="sethealth">SetHealth</h2>
+<div class="highlight"><pre><span></span><code>SetHealth(Thing thing, float health)
+</code></pre></div>
+<h2 id="amputatejoint">AmputateJoint</h2>
+<div class="highlight"><pre><span></span><code>AmputateJoint(Thing thing, int joint)
+</code></pre></div>
+<h2 id="setactorweapon">SetActorWeapon</h2>
+<div class="highlight"><pre><span></span><code>SetActorWeapon(Thing actor, Template weapon)
+</code></pre></div>
+<h2 id="getactorweapon">GetActorWeapon</h2>
+<div class="highlight"><pre><span></span><code>GetActorWeapon(Thing actor) -&gt; int
+</code></pre></div>
+<h2 id="getphysicsflags">GetPhysicsFlags</h2>
+<div class="highlight"><pre><span></span><code>GetPhysicsFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setphysicsflags">SetPhysicsFlags</h2>
+<div class="highlight"><pre><span></span><code>SetPhysicsFlags(Thing thing, int physflags)
+</code></pre></div>
+<h2 id="clearphysicsflags">ClearPhysicsFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearPhysicsFlags(Thing thing, int physflags)
+</code></pre></div>
+<h2 id="parsearg">ParseArg</h2>
+<div class="highlight"><pre><span></span><code>ParseArg(Thing thing, string args)
+</code></pre></div>
+<h2 id="getthingrotvel">GetThingRotVel</h2>
+<div class="highlight"><pre><span></span><code>GetThingRotVel(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthingrotvel">SetThingRotVel</h2>
+<div class="highlight"><pre><span></span><code>SetThingRotVel(Thing thing, Vector vel)
+</code></pre></div>
+<h2 id="getthingrotthrust">GetThingRotThrust</h2>
+<div class="highlight"><pre><span></span><code>GetThingRotThrust(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthingrotthrust">SetThingRotThrust</h2>
+<div class="highlight"><pre><span></span><code>SetThingRotThrust(Thing thing, Vector vec)
+</code></pre></div>
+<h2 id="setthinglook">SetThingLook</h2>
+<div class="highlight"><pre><span></span><code>SetThingLook(Thing thing, Vector look)
+</code></pre></div>
+<h2 id="setthingheadlookpos">SetThingHeadLookPos</h2>
+<div class="highlight"><pre><span></span><code>SetThingHeadLookPos(Thing thing, Vector look)
+</code></pre></div>
+<h2 id="setthingheadlookthing">SetThingHeadLookThing</h2>
+<div class="highlight"><pre><span></span><code>SetThingHeadLookThing(Thing thing, Thing lookThing)
+</code></pre></div>
+<h2 id="isthingcrouching">IsThingCrouching</h2>
+<div class="highlight"><pre><span></span><code>IsThingCrouching(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="iscrouching">IsCrouching</h2>
+<div class="highlight"><pre><span></span><code>IsCrouching(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="getthingclasscog">GetThingClassCog</h2>
+<div class="highlight"><pre><span></span><code>GetThingClassCog(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setthingclasscog">SetThingClassCog</h2>
+<div class="highlight"><pre><span></span><code>SetThingClassCog(Thing thing, cog thingCog)
+</code></pre></div>
+<h2 id="getthingcapturecog">GetThingCaptureCog</h2>
+<div class="highlight"><pre><span></span><code>GetThingCaptureCog(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setthingcapturecog">SetThingCaptureCog</h2>
+<div class="highlight"><pre><span></span><code>SetThingCaptureCog(Thing thing, cog captureCog)
+</code></pre></div>
+<h2 id="getthingrespawn">GetThingRespawn</h2>
+<div class="highlight"><pre><span></span><code>GetThingRespawn(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="getthingsignature">GetThingSignature</h2>
+<div class="highlight"><pre><span></span><code>GetThingSignature(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setthingattachflags">SetThingAttachFlags</h2>
+<div class="highlight"><pre><span></span><code>SetThingAttachFlags(Thing thing, int attflags)
+</code></pre></div>
+<h2 id="clearthingattachflags">ClearThingAttachFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearThingAttachFlags(Thing thing, int attflags)
+</code></pre></div>
+<h2 id="getparticlesize">GetParticleSize</h2>
+<div class="highlight"><pre><span></span><code>GetParticleSize(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setparticlesize">SetParticleSize</h2>
+<div class="highlight"><pre><span></span><code>SetParticleSize(Thing thing, float size)
+</code></pre></div>
+<h2 id="getparticlegrowthspeed">GetParticleGrowthSpeed</h2>
+<div class="highlight"><pre><span></span><code>GetParticleGrowthSpeed(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setparticlegrowthspeed">SetParticleGrowthSpeed</h2>
+<div class="highlight"><pre><span></span><code>SetParticleGrowthSpeed(Thing thing, float speed)
+</code></pre></div>
+<h2 id="getparticletimeoutrate">GetParticleTimeoutRate</h2>
+<div class="highlight"><pre><span></span><code>GetParticleTimeoutRate(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setparticletimeoutrate">SetParticleTimeoutRate</h2>
+<div class="highlight"><pre><span></span><code>SetParticleTimeoutRate(Thing thing, float timeoutRate)
+</code></pre></div>
+<h2 id="gettypeflags">GetTypeFlags</h2>
+<div class="highlight"><pre><span></span><code>GetTypeFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="settypeflags">SetTypeFlags</h2>
+<div class="highlight"><pre><span></span><code>SetTypeFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="cleartypeflags">ClearTypeFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearTypeFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="getactorflags">GetActorFlags</h2>
+<div class="highlight"><pre><span></span><code>GetActorFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setactorflags">SetActorFlags</h2>
+<div class="highlight"><pre><span></span><code>SetActorFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="clearactorflags">ClearActorFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearActorFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="getweaponflags">GetWeaponFlags</h2>
+<div class="highlight"><pre><span></span><code>GetWeaponFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setweaponflags">SetWeaponFlags</h2>
+<div class="highlight"><pre><span></span><code>SetWeaponFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="clearweaponflags">ClearWeaponFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearWeaponFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="getexplosionflags">GetExplosionFlags</h2>
+<div class="highlight"><pre><span></span><code>GetExplosionFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setexplosionflags">SetExplosionFlags</h2>
+<div class="highlight"><pre><span></span><code>SetExplosionFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="clearexplosionflags">ClearExplosionFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearExplosionFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="getitemflags">GetItemFlags</h2>
+<div class="highlight"><pre><span></span><code>GetItemFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setitemflags">SetItemFlags</h2>
+<div class="highlight"><pre><span></span><code>SetItemFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="clearitemflags">ClearItemFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearItemFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="getparticleflags">GetParticleFlags</h2>
+<div class="highlight"><pre><span></span><code>GetParticleFlags(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="setparticleflags">SetParticleFlags</h2>
+<div class="highlight"><pre><span></span><code>SetParticleFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="clearparticleflags">ClearParticleFlags</h2>
+<div class="highlight"><pre><span></span><code>ClearParticleFlags(Thing thing, int flags)
+</code></pre></div>
+<h2 id="takeitem">TakeItem</h2>
+<div class="highlight"><pre><span></span><code>TakeItem(Thing item, Thing thing)
+</code></pre></div>
+<h2 id="haslos">HasLOS</h2>
+<div class="highlight"><pre><span></span><code>HasLOS(Thing viewer, Thing target) -&gt; int
+</code></pre></div>
+<h2 id="getthingfireoffset">GetThingFireOffset</h2>
+<div class="highlight"><pre><span></span><code>GetThingFireOffset(Thing thing) -&gt; Vector
+</code></pre></div>
+<h2 id="setthingfireoffset">SetThingFireOffset</h2>
+<div class="highlight"><pre><span></span><code>SetThingFireOffset(Thing thing, Vector offset)
+</code></pre></div>
+<h2 id="getthinguserdata">GetThingUserData</h2>
+<div class="highlight"><pre><span></span><code>GetThingUserData(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setthinguserdata">SetThingUserData</h2>
+<div class="highlight"><pre><span></span><code>SetThingUserData(Thing thing, float userval)
+</code></pre></div>
+<h2 id="getthingcollidesize">GetThingCollideSize</h2>
+<div class="highlight"><pre><span></span><code>GetThingCollideSize(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setthingcollidesize">SetThingCollideSize</h2>
+<div class="highlight"><pre><span></span><code>SetThingCollideSize(Thing thing, float size)
+</code></pre></div>
+<h2 id="getthingmovesize">GetThingMoveSize</h2>
+<div class="highlight"><pre><span></span><code>GetThingMoveSize(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setthingmovesize">SetThingMoveSize</h2>
+<div class="highlight"><pre><span></span><code>SetThingMoveSize(Thing thing, float movesize)
+</code></pre></div>
+<h2 id="getthingmass">GetThingMass</h2>
+<div class="highlight"><pre><span></span><code>GetThingMass(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setthingmass">SetThingMass</h2>
+<div class="highlight"><pre><span></span><code>SetThingMass(Thing thing, float mass)
+</code></pre></div>
+<h2 id="syncthingpos">SyncThingPos</h2>
+<div class="highlight"><pre><span></span><code>SyncThingPos(Thing thing)
+</code></pre></div>
+<h2 id="syncthingattachment">SyncThingAttachment</h2>
+<div class="highlight"><pre><span></span><code>SyncThingAttachment(Thing thing)
+</code></pre></div>
+<h2 id="syncthingstate">SyncThingState</h2>
+<div class="highlight"><pre><span></span><code>SyncThingState(Thing thing)
+</code></pre></div>
+<h2 id="attachthingtothingex">AttachThingToThingEx</h2>
+<div class="highlight"><pre><span></span><code>AttachThingToThingEx(Thing thing, Thing attachThing, int attflags)
+</code></pre></div>
+<h2 id="getthingattachedthing">GetThingAttachedThing</h2>
+<div class="highlight"><pre><span></span><code>GetThingAttachedThing(Thing thing, int attype) -&gt; int
+</code></pre></div>
+<h2 id="getmeshbyname">GetMeshByName</h2>
+<div class="highlight"><pre><span></span><code>GetMeshByName(Thing thing, string meshName) -&gt; int
+</code></pre></div>
+<h2 id="getnodebyname">GetNodeByName</h2>
+<div class="highlight"><pre><span></span><code>GetNodeByName(Thing thing, string nodeName) -&gt; int
+</code></pre></div>
+<h2 id="attachthingtothingmesh">AttachThingToThingMesh</h2>
+<div class="highlight"><pre><span></span><code>AttachThingToThingMesh(Thing attachThing, Template template, int meshNum) -&gt; int
+</code></pre></div>
+<h2 id="detachthingmesh">DetachThingMesh</h2>
+<div class="highlight"><pre><span></span><code>DetachThingMesh(Thing thing)
+</code></pre></div>
+<h2 id="setthingmesh">SetThingMesh</h2>
+<div class="highlight"><pre><span></span><code>SetThingMesh(Thing thing, int meshNum, Model model, int meshNumSrc) -&gt; int
+</code></pre></div>
+<h2 id="restorethingmesh">RestoreThingMesh</h2>
+<div class="highlight"><pre><span></span><code>RestoreThingMesh(Thing thing, int refnum)
+</code></pre></div>
+<h2 id="getthingalpha">GetThingAlpha</h2>
+<div class="highlight"><pre><span></span><code>GetThingAlpha(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="setthingalpha">SetThingAlpha</h2>
+<div class="highlight"><pre><span></span><code>SetThingAlpha(Thing thing, float alpha) -&gt; float
+</code></pre></div>
+<h2 id="getcamerafov">GetCameraFOV</h2>
+<div class="highlight"><pre><span></span><code>GetCameraFOV() -&gt; float
+</code></pre></div>
+<h2 id="setcamerafov">SetCameraFOV</h2>
+<div class="highlight"><pre><span></span><code>SetCameraFOV(float fov, int bInterp, float timeDelta)
+</code></pre></div>
+<h2 id="resetcamerafov">ResetCameraFOV</h2>
+<div class="highlight"><pre><span></span><code>ResetCameraFOV(int bInterp, float time)
+</code></pre></div>
+<h2 id="setcameralookinterp">SetCameraLookInterp</h2>
+<div class="highlight"><pre><span></span><code>SetCameraLookInterp(int camNum, int bEnable)
+</code></pre></div>
+<h2 id="setcameraposinterp">SetCameraPosInterp</h2>
+<div class="highlight"><pre><span></span><code>SetCameraPosInterp(int camNum, int bDollyMode)
+</code></pre></div>
+<h2 id="setcamerainterpspeed">SetCameraInterpSpeed</h2>
+<div class="highlight"><pre><span></span><code>SetCameraInterpSpeed(int camNum, float speed)
+</code></pre></div>
+<h2 id="setcameraposition">SetCameraPosition</h2>
+<div class="highlight"><pre><span></span><code>SetCameraPosition(int camNum, Vector vec)
+</code></pre></div>
+<h2 id="animatespritesize">AnimateSpriteSize</h2>
+<div class="highlight"><pre><span></span><code>AnimateSpriteSize(Thing sprite, Vector vecStart, Vector vecEnd, float deltaTime) -&gt; int
+</code></pre></div>
+<h2 id="getcameraposition">GetCameraPosition</h2>
+<div class="highlight"><pre><span></span><code>GetCameraPosition(int camNum) -&gt; Vector
+</code></pre></div>
+<h2 id="setcamerafadething">SetCameraFadeThing</h2>
+<p><div class="highlight"><pre><span></span><code>SetCameraFadeThing(int camNum, Thing fadeThing, Thing camPosThing, int bWhiteFade)
+</code></pre></div>
+Sets fade thing for camera at <code>camNum</code>.
+<strong>Parameters</strong>:
+  - <code>camNum</code> - The camera number for which to set the fade thing for.
+  - <code>fadeThing</code> - The fade plate thing
+  - <code>camPosThing</code> - The thing to be used as camera postition thing (primary thing).<br />
+      The thing position and orientation will be changed to the camera pose. Can be daynamic thinf created in script.
+  - <code>bWhiteFade</code> - If true the white side of the fade plate will face the camera.</p>
+<h2 id="setextcamoffset">SetExtCamOffset</h2>
+<div class="highlight"><pre><span></span><code>SetExtCamOffset(Vector vec)
+</code></pre></div>
+<h2 id="setextcamoffsettothing">SetExtCamOffsetToThing</h2>
+<div class="highlight"><pre><span></span><code>SetExtCamOffsetToThing(Thing thing)
+</code></pre></div>
+<h2 id="setextcamlookoffsettothing">SetExtCamLookOffsetToThing</h2>
+<div class="highlight"><pre><span></span><code>SetExtCamLookOffsetToThing(Thing thing)
+</code></pre></div>
+<h2 id="setextcamlookoffset">SetExtCamLookOffset</h2>
+<div class="highlight"><pre><span></span><code>SetExtCamLookOffset(Vector vec)
+</code></pre></div>
+<h2 id="restoreextcam">RestoreExtCam</h2>
+<div class="highlight"><pre><span></span><code>RestoreExtCam()
+</code></pre></div>
+<h2 id="playforcemovemode">PlayForceMoveMode</h2>
+<div class="highlight"><pre><span></span><code>PlayForceMoveMode(Thing thing, int submode) -&gt; int
+</code></pre></div>
+<h2 id="isthingautoaiming">IsThingAutoAiming</h2>
+<p><div class="highlight"><pre><span></span><code>IsThingAutoAiming()
+</code></pre></div>
+Not used.</p>
+<h2 id="getmovestatus">GetMoveStatus</h2>
+<div class="highlight"><pre><span></span><code>GetMoveStatus(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="createlaser">CreateLaser</h2>
+<div class="highlight"><pre><span></span><code>CreateLaser(Thing srcThing, Vector offset, Vector endPos, float baseRadius, float tipRadius, float duration) -&gt; int
+</code></pre></div>
+<h2 id="createlightning">CreateLightning</h2>
+<div class="highlight"><pre><span></span><code>CreateLightning(Thing sourceThing, Vector offset, Vector endPos, float baseRadius, float tipRadius, float duration) -&gt; int
+</code></pre></div>
+<h2 id="makefairydust">MakeFairyDust</h2>
+<div class="highlight"><pre><span></span><code>MakeFairyDust(Thing thing, Vector pos)
+</code></pre></div>
+<h2 id="makefairydustdeluxe">MakeFairyDustDeluxe</h2>
+<div class="highlight"><pre><span></span><code>MakeFairyDustDeluxe(Thing thing, Vector pos)
+</code></pre></div>
+<h2 id="setpuppetmodefps">SetPuppetModeFPS</h2>
+<p><div class="highlight"><pre><span></span><code>SetPuppetModeFPS(Thing thing, int mode, int submode, float fps) -&gt; float
+</code></pre></div>
+Sets a new FPS for the <a href="../pup.md#mode-types">puppet mode</a> and <a href="../pup.md#sub-mode-list">puppet submode</a> animation track of the <code>thing</code> object.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to set the keyframe FPS.
+ * <code>mode</code> - The <a href="../pup.md#mode-types number"><code>puppet mode</code></a> number.
+ * <code>submode</code> - The <a href="../pup.md#sub-mode-state-table">puppet submode</a> number.
+ * <code>fps</code> - The new keyframe FPS</p>
+<p><strong>Return</strong><br />
+  Returns previous track FPS.</p>
+<h2 id="setmovemode">SetMoveMode</h2>
+<p><div class="highlight"><pre><span></span><code>SetMoveMode(Thing thing, int newMode) -&gt; int
+</code></pre></div>
+Sets <a href="../pup.md#pup-move-modes"><code>puppet move mode</code></a> for <code>thing</code> object.<br />
+The object needs to have both a model and puppet object assigned.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to set new move mode.
+ * <code>moveMode</code> - The <a href="../pup.md#pup-move-modes"><code>puppet move mode</code></a> number (0-2).</p>
+<p><strong>Return</strong><br />
+  On success 0 is returned, otherwise -1.</p>
+<h2 id="checkfloordistance">CheckFloorDistance</h2>
+<div class="highlight"><pre><span></span><code>CheckFloorDistance(Thing thing) -&gt; float
+</code></pre></div>
+<h2 id="checkpathtopoint">CheckPathToPoint</h2>
+<div class="highlight"><pre><span></span><code>CheckPathToPoint(Thing viewer, Vector vecTarget, int bDetectThings, int bSkipFloor) -&gt; float
+</code></pre></div>
+<h2 id="setthingstatechange">SetThingStateChange</h2>
+<div class="highlight"><pre><span></span><code>SetThingStateChange(Thing thing, int state, int armModeState)
+</code></pre></div>
+<h2 id="createpolylinething">CreatePolylineThing</h2>
+<div class="highlight"><pre><span></span><code>CreatePolylineThing(Thing srcThing, Optional[Thing] destThing, Vector endPos, Material material, float baseRadius, float tipRadius, float duration) -&gt; int
+</code></pre></div>
+<h2 id="startquetzanim">StartQuetzAnim</h2>
+<div class="highlight"><pre><span></span><code>StartQuetzAnim(Thing thing, int mode) -&gt; int
+</code></pre></div>
+<h2 id="boardvehicle">BoardVehicle</h2>
+<div class="highlight"><pre><span></span><code>BoardVehicle(Thing thing) -&gt; int
+</code></pre></div>
+<h2 id="fadeintrack">FadeInTrack</h2>
+<p><div class="highlight"><pre><span></span><code>FadeInTrack(Thing thing, int trackNum, float speed) -&gt; int
+</code></pre></div>
+Causes the track animation to fade-in for the thing object.<br />
+The object needs to have both a model and puppet object assigned.</p>
+<p><strong>Parameters</strong>:
+ * <code>thing</code> - The game object to fade-in puppet <code>track</code> animation.
+ * <code>trackNum</code> - Puppet track number to play fade-in mode.
+ * <code>fadeTime</code> - Track fade-in speed. Should be greater than 0, else 1 is set.</p>
+<p><strong>Return</strong><br />
+  On success 1 is returned, otherwise -1.</p>
+<h2 id="isghostvisible">IsGhostVisible</h2>
+<div class="highlight"><pre><span></span><code>IsGhostVisible(Thing thing, Thing ghostThing, float angle) -&gt; int
+</code></pre></div>
+<h2 id="makecamera2likecamera1">MakeCamera2LikeCamera1</h2>
+<p><div class="highlight"><pre><span></span><code>MakeCamera2LikeCamera1(Thing cam1Pos, Thing cam1Look) -&gt; int
+</code></pre></div>
+Assigns the position and focus of camera 1 aka external camera (3rd person) to the <code>cam1Pos</code> and <code>can1Look</code> objects.</p>
+<p><strong>Parameters</strong>:
+ * <code>cam1Pos</code> - The game object to which camera 1's position is assigned. Must be a valid, non-free object.
+ * <code>cam1Look</code> - The game object to which camera 1's focus is assigned. Must be a valid, non-free object.</p>
+<p><strong>Return</strong><br />
+  On success 1 is returned, otherwise -1.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
