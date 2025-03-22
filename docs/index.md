@@ -30,7 +30,7 @@ Root
 
 <div class="grid cards" markdown>  
 
-- :material-cog: [**COG script**](cog.md)
+- :material-cog: [**COG script**](cog/index.md)
 
     ---  
 
